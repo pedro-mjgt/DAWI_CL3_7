@@ -1,1 +1,18 @@
-<p>ejercicio1 works!</p>
+<div class="card">
+  <div class="card-header">
+    Ejercicio 1
+  </div>
+  <div class="card-body">
+    <div class="mb-3">
+      <label for="txtmes" class="form-label">Cantidad</label>
+      <input type="number" class="form-control" id="txtmes" [(ngModel)]="computadora.numero">
+    </div>
+    <button (click)="calcularVenta()" type="button" class="btn btn-primary">Procesar</button>
+    <hr>
+    @if (mostrarResultado) {
+      <div class="alert alert-primary" role="alert">
+        Se realizó un descuento de S/{{computadora.descuento}}. El total de la venta es de S/{{computadora.total}}
+      </div>
+    }
+  </div>
+</div>
