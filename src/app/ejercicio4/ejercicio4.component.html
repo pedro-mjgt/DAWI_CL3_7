@@ -1,1 +1,18 @@
-<p>ejercicio4 works!</p>
+<div class="card">
+  <div class="card-header">
+    Ejercicio 4
+  </div>
+  <div class="card-body">
+    <div class="mb-3">
+      <label for="txtmes" class="form-label">Número</label>
+      <input type="number" class="form-control" id="txtmes" [(ngModel)]="numero.valor">
+    </div>
+    <button (click)="calcularFactorial()" type="button" class="btn btn-primary">Procesar</button>
+    <hr>
+    @if (mostrarResultado) {
+      <div class="alert alert-primary" role="alert">
+        Su factorial es: {{numero.factorial}}
+      </div>
+    }
+  </div>
+</div>
