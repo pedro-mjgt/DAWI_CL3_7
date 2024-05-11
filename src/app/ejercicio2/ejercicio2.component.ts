@@ -12,8 +12,9 @@ export class Ejercicio2Component {
   mes ={
     numeroMes: 0,
     nombreMes: ""
+    
   };
-
+  mostrarResultado = false;
   
 
   obtenerNombreMes() {
@@ -30,5 +31,6 @@ export class Ejercicio2Component {
     } else {
       this.mes.nombreMes = 'Número de mes inválido';
     }
+    this.mostrarResultado = true;
   }
 }
